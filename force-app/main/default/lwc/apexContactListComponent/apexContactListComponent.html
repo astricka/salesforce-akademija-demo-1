@@ -1,0 +1,31 @@
+<!--
+ - Created by algirdas on 2023-01-19.
+ -->
+
+<!-- Apex Contact List Component -->
+<template>
+    <lightning-button label='get contacts' onclick={loadContacts}></lightning-button>
+    <lightning-input label='enter name' onchange={setName}></lightning-input>
+    <lightning-card >
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                <template for:each={contacts} for:item='contact'>
+                    <tr key={contact.Id}>
+                        <td>{contact.FirstName}</td>
+                        <td>{contact.LastName}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

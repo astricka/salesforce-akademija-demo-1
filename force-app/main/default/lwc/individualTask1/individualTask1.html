@@ -1,0 +1,28 @@
+<!--
+ - Created by algirdas on 2023-01-25.
+ -->
+
+<!-- Individual Task 1 -->
+<template>
+    <lightning-input id="enter-new-item" label='add new item' onchange={handleChange}></lightning-input>
+    <lightning-button label='add item' onclick={addItemToArray}></lightning-button>
+    <lightning-card >
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    Array items
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <template for:each={myArray} for:item='item'>
+                <tr key={item.Id}>
+                    <td>{item.name}</td>
+                    <td><lightning-button label='delete' data-value={item.id} onclick={handleDelete}></lightning-button></td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

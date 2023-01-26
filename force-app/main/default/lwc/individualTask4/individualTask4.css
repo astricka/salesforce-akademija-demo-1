@@ -1,0 +1,12 @@
+/**
+ * Created by algirdas on 2023-01-26.
+ */
+td {
+    padding: 20px;
+    border: red solid 1px;
+    color: blue;
+}
+
+table {
+    width: 50%;
+}

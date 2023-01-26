@@ -1,0 +1,35 @@
+<!--
+ - Created by algirdas on 2023-01-17.
+ -->
+
+<aura:component description="CMP_SupplierRecordCreation" controller="CTRL_SupplierCreation" implements="flexipage:availableForRecordHome, force:hasRecordId">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="fields" type="String[]" default="['Name', 'Work_End__c', 'Work_Start__c']"/>
+    <aura:attribute name="newSupplier" type="Supplier__c" default="{
+    'sObjectType': 'Supplier__c',
+    'Name':'',
+    'Work_End__c': '',
+    'Work_Start__c': ''
+    }"/>
+
+    <lightning:card iconName="standard:opportunity">
+        <lightning:layout >
+            <lightning:layoutItem >
+                <lightning:inputName fieldName="{!v.newSupplier.Name}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem >
+                <lightning:input type="text" value="{!v.newSupplier.}" disabled="true"/>
+                <lightning:button class="slds-m-top_small" type="submit" label="Edit" onclick="{c.handleCreateSupplier()}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+
+    <lightning:messages />
+    <lightning:recordEditForm objectApiName="Supplier__c" onsuccess="{!c.handleSuccess}">
+        <lightning:inputField fieldName="Opportunity__c" value="{!v.recordId}" disabled="true"/>
+        <aura:iteration items="{!v.fields}" var="field">
+            <lightning:inputField fieldName="{!field}"/>
+        </aura:iteration>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+    </lightning:recordEditForm>
+</aura:component>

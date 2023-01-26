@@ -1,0 +1,19 @@
+<!--
+ - Created by algirdas on 2023-01-26.
+ -->
+
+<!-- Individual Task 4 -->
+<template>
+    <lightning-input label='enter contact id' onchange={handleChange}></lightning-input>
+    <lightning-button label='click me' onclick={handleClick}></lightning-button>
+    <lightning-card>
+        <table style="width: 50%">
+            <template for:each={contacts} for:item='contact'>
+                <tr key={contact.Id}>
+                    <td>{contact.FirstName}</td>
+                    <td>{contact.LastName}</td>
+                </tr>
+            </template>
+        </table>
+    </lightning-card>
+</template>

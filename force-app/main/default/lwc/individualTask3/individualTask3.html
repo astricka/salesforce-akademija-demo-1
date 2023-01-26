@@ -1,0 +1,22 @@
+<!--
+ - Created by algirdas on 2023-01-25.
+ -->
+
+<!-- Individual Task 3 -->
+<template>
+    <lightning-input label='enter number'
+                     value={number}
+                     onchange={handleChange}
+                     type="number"
+                     min="0"
+                     max="5"
+                     message-when-value-missing="vajeee"
+                     read-only="true"
+    ></lightning-input>
+    <lightning-button label="click me" onclick={handleClick}></lightning-button>
+    <lightning-card >
+        <template for:each={myArr} for:item="item">
+            <p key={item.id}>{item.value}</p>
+        </template>
+    </lightning-card>
+</template>

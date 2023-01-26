@@ -1,0 +1,11 @@
+<!--
+ - Created by algirdas on 2023-01-19.
+ -->
+
+<!-- Api Parent Component -->
+<template>
+    <lightning-card >
+        <lightning-button label='change value' onclick={changeValue}></lightning-button>
+        <c-api-child-component child-message={parentMessage}></c-api-child-component>
+    </lightning-card>
+</template>
