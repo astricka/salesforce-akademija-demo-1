@@ -20,6 +20,7 @@
         <members>LectureTestClass</members>
         <members>LectureUnitTest</members>
         <members>CurseWordsException</members>
+        <members>Test_TH_ParentCaseFind</members>
         <name>ApexClass</name>
     </types>
     <types>
