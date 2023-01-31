@@ -6,5 +6,12 @@
 <template>
     <lightning-card >
         <c-individual-task5-child onmyevent={handleMyEvent}></c-individual-task5-child>
+        <c-hello-world-api hello-name="Labas rytas" ></c-hello-world-api>
+        <template if:true={hasEventName}>
+            <c-hello-world-api hello-name={eventName} ></c-hello-world-api>
+        </template>
+        <template if:false={hasEventName}>
+            <p>Dar ne vakars</p>
+        </template>
     </lightning-card>
 </template>

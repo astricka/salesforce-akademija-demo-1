@@ -17,6 +17,9 @@
         <members>CTRL_SupplierCreation</members>
         <members>DAL_ApexInLwc</members>
         <members>DAL_GetContacts</members>
+        <members>LectureTestClass</members>
+        <members>LectureUnitTest</members>
+        <members>CurseWordsException</members>
         <name>ApexClass</name>
     </types>
     <types>
