@@ -2,7 +2,7 @@
  * Created by Armandas on 2023-01-19.
  */
 
-import {LightningElement} from 'lwc';
+import { LightningElement } from 'lwc';
 
 export default class HelloNotificationChild extends LightningElement {
     firstName;
@@ -18,7 +18,7 @@ export default class HelloNotificationChild extends LightningElement {
 
     handleSubmit() {
         const fullName = `${this.firstName} ${this.lastName}`;
-        const submitEvent = new CustomEvent('submit', { detail: fullName });
+        const submitEvent = new CustomEvent('submit', {detail: fullName});
         this.dispatchEvent(submitEvent);
     }
 }

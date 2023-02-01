@@ -2,7 +2,7 @@
  * Created by Armandas on 2023-01-19.
  */
 
-import {api, LightningElement} from 'lwc';
+import { api, LightningElement } from 'lwc';
 import getContactById from '@salesforce/apex/DAL_Contact.getContactById';
 
 export default class ContactById extends LightningElement {

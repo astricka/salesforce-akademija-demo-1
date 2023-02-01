@@ -4,7 +4,7 @@
 
 <!-- Fibonacci Series -->
 <template>
-    <lightning-card >
+    <lightning-card>
         <lightning-input type="number" label="Enter a number" onchange={handleNumber}></lightning-input>
         <button onclick={generateFibonacci}>Generate Fibonacci</button>
         <template for:each={fibonacciSeries} for:item="number">
