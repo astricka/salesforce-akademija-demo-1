@@ -21,7 +21,7 @@ ir komandomis:
 Instrukcijos pagal https://www.sfdcstop.com/2019/01/how-to-connect-to-salesforce-with.html.
 
 1. Atsidaryti scratch org Setup
-1. Paieškoje kairėje surasti "Manage Apps"
+1. Paieškoje kairėje surasti "app Manages"
 1. Sukurti nauja "Connected app" - paspausti `New Connected App`
 1. Įrašyti savo pavadinimą, identifikatorių, email - Testavimui, nesvarbu, kas įrašyta
 1. uždėti varnelę "Enable OAuth Settings"
@@ -31,7 +31,11 @@ Instrukcijos pagal https://www.sfdcstop.com/2019/01/how-to-connect-to-salesforce
    1. `Full access (full)`
 1. Isšsaugoti
 1. Paspausti `Manage Consumer Details`
-1. Išsisaugoti "Consumer Key" ir "onsumer Secret" 
+1. Atsidariusiame lange, išsisaugoti "Consumer Key" ir "Consumer Secret"
+1. Grįžti į Connected app, ir paspausti `Manage`
+1. Atsidariusiame lange, paspausti `Edit Policies`
+1. Laukelyje "IP Relaxation" pasirinkti `Relax IP restrictions`
+1. Isšsaugoti
 
 #### Postman
 
